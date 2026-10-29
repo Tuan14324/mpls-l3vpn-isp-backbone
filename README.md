@@ -1,12 +1,12 @@
-\# DỰ ÁN MÔ PHỎNG MẠNG ISP MPLS L3VPN TRÊN EVE-NG
+ DỰ ÁN MÔ PHỎNG MẠNG ISP MPLS L3VPN TRÊN EVE-NG
 
 
 
-\*\*Thiết kế, triển khai và kiểm thử hệ thống mạng ISP Backbone sử dụng IS-IS, MPLS LDP, MP-BGP VPNv4 và Route Reflector dự phòng.\*\*
+Thiết kế, triển khai và kiểm thử hệ thống mạng ISP Backbone sử dụng IS-IS, MPLS LDP, MP-BGP VPNv4 và Route Reflector dự phòng.\*\*
 
 
 
-\## 1. Giới thiệu dự án
+ 1. Giới thiệu dự án
 
 
 
@@ -30,7 +30,7 @@ Dự án đồng thời triển khai hai Route Reflector nhằm dự phòng mặ
 
 
 
-\## 2. Mục tiêu dự án
+ 2. Mục tiêu dự án
 
 
 
@@ -58,13 +58,13 @@ Dự án đồng thời triển khai hai Route Reflector nhằm dự phòng mặ
 
 
 
-\## 3. Môi trường triển khai
+3. Môi trường triển khai
 
 
 
 | Thành phần | Thông tin |
 
-|---|---|
+|-------------|------------|
 
 | Phần mềm mô phỏng | EVE-NG |
 
@@ -98,7 +98,7 @@ Dự án đồng thời triển khai hai Route Reflector nhằm dự phòng mặ
 
 
 
-\### 4.1. Thành phần thiết bị
+\ 4.1. Thành phần thiết bị
 
 
 
@@ -120,7 +120,7 @@ Dự án đồng thời triển khai hai Route Reflector nhằm dự phòng mặ
 
 
 
-\### 4.2. Nguyên lý hoạt động
+\ 4.2. Nguyên lý hoạt động
 
 
 
@@ -144,11 +144,11 @@ Các chi nhánh thuộc cùng một khách hàng có thể liên lạc qua MPLS 
 
 
 
-\## 5. Thiết kế địa chỉ IP
+\ 5. Thiết kế địa chỉ IP
 
 
 
-\### 5.1. Địa chỉ Loopback của ISP
+\ 5.1. Địa chỉ Loopback của ISP
 
 
 
@@ -202,11 +202,11 @@ Bảng địa chỉ đầy đủ của từng liên kết được trình bày t
 
 
 
-\## 6. Thiết kế MPLS L3VPN
+\6. Thiết kế MPLS L3VPN
 
 
 
-\### 6.1. Customer A
+\ 6.1. Customer A
 
 
 
@@ -238,7 +238,7 @@ Thông số VPN:
 
 
 
-\### 6.2. Customer B
+\ 6.2. Customer B
 
 
 
@@ -258,7 +258,7 @@ Thông số VPN:
 
 
 
-\### 6.3. Phân bổ RD và RT
+\ 6.3. Phân bổ RD và RT
 
 
 
@@ -286,7 +286,7 @@ RD giúp phân biệt các tuyến VPNv4 có cùng IPv4 prefix, còn VRF và ch�
 
 
 
-\### 6.4. Hỗ trợ địa chỉ IP trùng nhau
+\ 6.4. Hỗ trợ địa chỉ IP trùng nhau
 
 
 
@@ -308,7 +308,7 @@ Dù địa chỉ IP trùng nhau, mỗi khách hàng vẫn sử dụng bảng đ�
 
 
 
-\## 7. Quy trình triển khai
+\ 7. Quy trình triển khai
 
 
 
@@ -380,11 +380,11 @@ Mô phỏng sự cố liên kết PE1–P1 và sự cố RR1, quan sát quá tr�
 
 
 
-\## 8. Kết quả kiểm thử
+\ 8. Kết quả kiểm thử
 
 
 
-\### 8.1. IS-IS Backbone
+\ 8.1. IS-IS Backbone
 
 
 
@@ -408,7 +408,7 @@ show ip route isis
 
 
 
-\### 8.2. MPLS LDP
+\ 8.2. MPLS LDP
 
 
 
@@ -430,7 +430,7 @@ show mpls forwarding-table
 
 
 
-\### 8.3. MP-BGP VPNv4
+\ 8.3. MP-BGP VPNv4
 
 
 
@@ -456,7 +456,7 @@ show ip route vrf CUST-B
 
 
 
-\### 8.4. Kết nối giữa các chi nhánh
+\ 8.4. Kết nối giữa các chi nhánh
 
 
 
@@ -480,11 +480,11 @@ Traceroute xác nhận lưu lượng Customer A đi qua hệ thống MPLS Backbo
 
 
 
-\## 9. Kiểm thử dự phòng
+\ 9. Kiểm thử dự phòng
 
 
 
-\### 9.1. Mất liên kết PE1–P1
+\ 9.1. Mất liên kết PE1–P1
 
 
 
@@ -530,7 +530,7 @@ Chưa có số liệu định lượng về packet loss và traffic recovery tim
 
 
 
-\### 9.2. Mất Route Reflector RR1
+\ 9.2. Mất Route Reflector RR1
 
 
 
@@ -584,7 +584,7 @@ RR2 tiếp tục thực hiện chức năng phân phối VPNv4 khi RR1 bị lỗ
 
 
 
-\## 10. Trạng thái hoàn thành
+\ 10. Trạng thái hoàn thành
 
 
 
@@ -620,7 +620,7 @@ RR2 tiếp tục thực hiện chức năng phân phối VPNv4 khi RR1 bị lỗ
 
 
 
-\## 11. Hạn chế và hướng phát triển
+\ 11. Hạn chế và hướng phát triển
 
 
 
@@ -640,7 +640,7 @@ RR2 tiếp tục thực hiện chức năng phân phối VPNv4 khi RR1 bị lỗ
 
 
 
-\## 12. Kiến thức và kỹ năng đạt được
+\ 12. Kiến thức và kỹ năng đạt được
 
 
 
@@ -670,7 +670,7 @@ Dự án giúp thực hành các kỹ năng:
 
 
 
-\## 13. Ghi chú
+\13. Ghi chú
 
 
 
