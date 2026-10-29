@@ -1,0 +1,21 @@
+# Hệ điều hành và editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Thông tin xác thực và khóa (không lưu lên GitHub)
+*.pem
+*.key
+*.p12
+*.pfx
+.env
+.env.*
+secrets/
+
+# Image/capture lớn có bản quyền hoặc không cần thiết
+*.qcow2
+*.vmdk
+*.vdi
+*.iso
+*.bin
